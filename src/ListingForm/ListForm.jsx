@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import web3Context from "../context/web3Context";
+import Web3Context from "../context/Web3Context";
 import { ethers } from "ethers";
 
 const ListForm = ({ lastMintedTokenId }) => {
   const [tokenId, setTokenId] = useState("");
   const [price, setPrice] = useState("");
-  const { provider, account, nftContract, chainId } = useContext(web3Context);
+  const { provider, account, nftContract, chainId } = useContext(Web3Context);
 
   const handleListNFT = async () => {
     if (!provider || !account || !nftContract || !chainId) {
