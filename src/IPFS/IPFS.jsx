@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useContext } from "react";
-import web3Context from "../context/web3Context";
+import Web3Context from "../context/Web3Context";
 import ListForm from "../ListingForm/ListForm";
 import ShowNft from "../ShowNft/ShowNft"; // Add this import
 
@@ -11,7 +11,7 @@ const IPFS = () => {
   const [imageFile, setImageFile] = useState(null);
   const [lastMintedTokenId, setLastMintedTokenId] = useState("");
 
-  const { provider, account, nftContract, chainId } = useContext(web3Context);
+  const { provider, account, nftContract, chainId } = useContext(Web3Context);
 
   const uploadToIPFS = async (file) => {
     if (file) {
